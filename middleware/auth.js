@@ -72,7 +72,7 @@ exports.login =  (req,res)=> {
                 }
 
                 var query = "INSERT INTO ?? SET ?";
-                var table = ["access_token"];
+                var table = ["akses_token"];
                 query = mysql.format(query, table);
                 connection.query(query,data, (error, rows)=> {
                     if(error){
