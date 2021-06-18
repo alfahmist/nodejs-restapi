@@ -1,0 +1,24 @@
+{
+  "name": "nodejs-restapi",
+  "version": "1.0.0",
+  "description": "aplikasi rest api",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alfahmist/nodejs-restapi.git"
+  },
+  "keywords": [
+    "rest",
+    "api",
+    "nodejs"
+  ],
+  "author": "fahmi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alfahmist/nodejs-restapi/issues"
+  },
+  "homepage": "https://github.com/alfahmist/nodejs-restapi#readme"
+}
