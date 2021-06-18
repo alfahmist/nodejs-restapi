@@ -17,3 +17,15 @@ exports.tampilSemuaMahasiswa = (req, res) => {
         }
     });
 };
+
+//menampilkan data mahasiswa by id
+exports.tampilMahasiswaById = (req, res) => {
+    let id = req.params.id;
+    connection.query(`SELECT * FROM mahasiswa where id_mahasiswa= ?`,[id], (error, rows, fields)=> {
+        if(error){
+            connection.log(error);
+        } else {
+            response.ok(rows, res);
+        }
+    });
+};
