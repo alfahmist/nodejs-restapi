@@ -71,3 +71,19 @@ exports.hapusMahasiswa = (req, res)=> {
         }
     });
 }
+
+//menampilkan matakuliah group
+exports.tampilGroupMataKuliah = (req, res)=> {
+    connection.query(`SELECT mahasiswa.id_mahasiswa, mahasiswa.nim, mahasiswa.nama, mahasiswa.jurusan, matakuliah.matakuliah, matakuliah.sks FROM krs 
+    JOIN mahasiswa
+    JOIN matakuliah
+    WHERE krs.id_mahasiswa = mahasiswa.id_mahasiswa
+    AND krs.id_matakuliah = matakuliah.id_matakuliah`, 
+    (error, rows, fields)=> {
+        if(error){
+            console.log(error);
+        } else {
+            response.oknested(rows, res);
+        }
+    });
+}
