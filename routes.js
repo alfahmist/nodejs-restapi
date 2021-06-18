@@ -12,9 +12,12 @@ module.exports = (app) => {
     app.route('/mahasiswa/:id')
         .get(jsonku.tampilMahasiswaById);
 
-    app.route('/tambah')
+    app.route('/mahasiswa')
         .post(jsonku.insertMahasiswa);
 
-    app.route('/ubah')
+    app.route('/mahasiswa')
         .put(jsonku.editMahasiswa);
+
+    app.route('/mahasiswa')
+        .delete(jsonku.hapusMahasiswa);
 }
