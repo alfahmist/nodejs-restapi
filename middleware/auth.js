@@ -59,7 +59,7 @@ exports.login =  (req,res)=> {
         if(error){
             console.log(error);
         } else {
-            if(rows == 1){
+            if(rows.length == 1){
                 var token = jwt.sign({rows}, config.secret, {
                     expiresIn: 1440
                 });
