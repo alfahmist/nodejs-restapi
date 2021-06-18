@@ -1,5 +1,5 @@
 var connection = require('../koneksi');
-var mysql = require('./mysql');
+var mysql = require('mysql');
 var md5  = require('MD5');
 var response  = require('../res');
 var jwt  = require('jsonwebtoken');
@@ -31,7 +31,7 @@ exports.registrasi = (req, res) => {
                 query = mysql.format(query, table);
                 connection.query(query, post, (error, rows)=>{
                     if(error){
-                        consolelog(error);
+                        console.log(error);
                     } else {
                         response.ok("Berhasil register user baru", res);
                     }
